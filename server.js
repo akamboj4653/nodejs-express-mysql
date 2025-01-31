@@ -20,11 +20,11 @@ app.use(express.urlencoded({ extended: true })); /* bodyParser.urlencoded() is d
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
-
 require("./app/routes/tutorial.routes.js")(app);
 
+
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
